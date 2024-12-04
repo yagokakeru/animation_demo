@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+html,body{
+    height: 100%;
+}
+
+body{
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Helvetica Neue","Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+
+
+
+
+
+
+br.pc{
+    display: block;
+}
+br.tb{
+    display: none;
+}
+br.sp{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 767px){
+    br.pc{
+        display: none;
+    }
+    br.tb{
+        display: block;
+    }
+    br.sp{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px){
+    br.pc{
+        display: none;
+    }
+    br.tb{
+        display: none;
+    }
+    br.sp{
+        display: block;
+    }
+}

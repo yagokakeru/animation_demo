@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+    <script src="https://www.unpkg.com/gsap@3.12.4/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+
+    <style>
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .content-lg {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .top_funcreators_title{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            height: auto;
+        }
+
+        .top_funcreators_symbol_wrap{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+
+        .top_funcreators_symbol{
+            aspect-ratio: 1/1;
+            background: linear-gradient(to left, #f0f, blue, lime, #ffc800, aqua);
+            background-size: 3000% 100%;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 200;
+            width: 38%;
+
+            animation-name: bgGradationAnim;
+            animation-duration: 5.0s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+        .top_funcreators_symbol:nth-child(3){
+            animation-delay: 2.5s;
+        }
+
+        @keyframes bgGradationAnim{
+            0%{
+                background-position: 0% 0%;
+            }
+            100%{
+                background-position: 100% 100%;
+            }
+        }
+
+        .top_funcreators_symbol_ampersand{
+            font-size: 114px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 200;
+        }
+
+        .top_funcreators_text{
+            font-size: 16px;
+            font-weight: 400;
+            color: black;
+            line-height: 1.9;
+            margin-top: 50px;
+            text-align: justify;
+        }
+
+        @media (max-width: 767px) {
+            .top_funcreators_symbol{
+                font-size: 32px;
+            }
+
+            .top_funcreators_symbol_ampersand{
+                font-size: 92px;
+            }
+
+            .top_funcreators_text{
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .top_funcreators_title{
+                width: 100%;
+            }
+
+            .top_funcreators_symbol_wrap{
+                width: 100%;
+            }
+
+            .top_funcreators_symbol{
+                font-size: 28px;
+            }
+
+            .top_funcreators_symbol_ampersand{
+                font-size: 72px;
+            }
+        }
+
+
+        @media (min-width: 768px){
+            .container {
+                width: 750px;
+            }
+        }
+
+        @media (min-width: 992px){
+            .container {
+                width: 970px;
+            }
+
+            .text-block {
+                display: block;
+                /* width: 640px; */
+                width: 70%;
+                margin: 24px auto 0;
+            }
+        }
+
+        @media (min-width: 1024px){
+            .container {
+                width: 1000px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        @media (min-width: 1200px){
+            .container {
+                width: 1170px;
+            }
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container content-lg">
+        <div class="text-block">
+            <svg class="top_funcreators_title" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 929.3544 185.11864">
+                <defs>
+                    <clipPath id="topFuncreatorsTitleMask">
+                        <path d="M0,182.6643V2.00664h62.22787v9.59151H12.04384v72.70876h43.2687v9.36766H12.04384v88.98973H0Z"/><path d="M100.58788,184.67093c-3.86807,0-7.32674-.92971-10.37198-2.78711-3.04928-1.8574-5.46329-4.83004-7.24809-8.92196-1.7848-4.08789-2.67619-9.55118-2.67619-16.39189V53.7516h11.81999v101.47927c0,7.88335,1.22616,13.23572,3.68051,16.05913,2.45233,2.82542,5.75975,4.23713,9.92427,4.23713,4.6082,0,9.21842-1.45002,13.82864-4.34805,4.60619-2.90004,8.84533-6.65316,12.71339-11.26337V53.7516h11.59815v128.91269h-11.59815v-15.16572c-4.16452,5.20515-8.96028,9.36766-14.38525,12.48954-5.43102,3.12188-11.19077,4.68282-17.2853,4.68282Z"/><path d="M165.04221,182.6643V53.7516h11.81999v13.82864c4.01529-4.75744,8.62147-8.58719,13.82864-11.48723,5.20313-2.90004,10.77936-4.35006,16.72666-4.35006,3.86605,0,7.32271.93172,10.37198,2.78912,3.04525,1.86143,5.46329,4.83407,7.24809,8.92196,1.7848,4.08991,2.67619,9.55521,2.67619,16.39189v102.81837h-11.81999v-101.47927c0-7.87932-1.22818-13.23371-3.68051-16.05913-2.45435-2.82341-5.76378-4.23713-9.92427-4.23713-4.31578,0-8.66382,1.3028-13.04817,3.90235-4.38838,2.60358-8.51459,6.06024-12.37862,10.37198v107.50119h-11.81999Z"/><path d="M338.55867,185.11864c-11.89662,0-21.00413-2.45435-27.32251-7.36102-6.3204-4.90668-10.67046-11.48723-13.04615-19.73763-2.37973-8.25241-3.56959-17.35991-3.56959-27.32251V53.97344c0-10.40425,1.26247-19.66099,3.79143-27.76618,2.52695-8.10318,6.98793-14.49819,13.38295-19.18101,6.39098-4.68484,15.31295-7.02625,26.76387-7.02625,10.55551,0,18.80792,2.08327,24.75724,6.24578,5.94529,4.16452,10.18241,10.07351,12.71138,17.73099,2.52695,7.6595,3.79143,16.61575,3.79143,26.87479v9.1438h-11.59613v-9.1438c0-8.62147-.81879-15.94619-2.45435-21.96812-1.63758-6.02192-4.61022-10.66844-8.91995-13.93956-4.31578-3.2691-10.4103-4.90668-18.28962-4.90668-8.62551,0-15.24236,1.7848-19.85056,5.35237-4.61022,3.56758-7.7321,8.5529-9.36766,14.94389-1.63758,6.39502-2.45233,13.82662-2.45233,22.30289v79.84593c0,8.91995.89139,16.54314,2.67619,22.85951,1.7848,6.32241,4.97928,11.19077,9.5895,14.60911,4.6082,3.42237,11.07582,5.13053,19.40487,5.13053,8.02856,0,14.1977-1.70816,18.51146-5.13053,4.31174-3.41834,7.24809-8.2141,8.80903-14.38525,1.56296-6.16713,2.34343-13.34261,2.34343-21.52242v-10.9286h11.59613v8.92196c0,10.25905-1.18986,19.40285-3.56758,27.43141-2.37973,8.03057-6.54425,14.31265-12.48954,18.84624-5.94932,4.5356-14.35097,6.80441-25.20293,6.80441Z"/><path d="M405.02165,182.6643V53.7516h11.81999v17.39622c3.86605-6.39098,8.65979-11.11414,14.38525-14.16342,5.72345-3.04525,11.11414-4.5719,16.17005-4.5719h1.00433c.36906,0,.78047.07664,1.22616.22386v12.26568c-.59493-.29444-1.3754-.47998-2.34141-.55661-.96802-.0726-1.82311-.11092-2.56527-.11092-5.9473,0-11.26337,1.41372-15.94619,4.23713-4.68282,2.82542-8.66382,6.91331-11.93292,12.26568v101.92698h-11.81999Z"/><path d="M572.73803,184.67093c-5.20515,0-9.74075-1.19188-13.60478-3.56758-3.86807-2.37771-6.87903-5.68715-9.03288-9.92427-2.15789-4.23914-3.23482-9.1075-3.23482-14.60911,0-5.49959.70585-10.29535,2.11957-14.38525,1.4117-4.08789,3.97697-7.91764,7.6958-11.48723,3.7148-3.56758,9.03288-7.32069,15.94619-11.26337,6.91331-3.93663,15.86956-8.51055,26.87479-13.7157v-9.14582c0-9.36564-.55661-16.65003-1.67186-21.8572-1.11525-5.20112-2.97668-8.84331-5.57623-10.9286-2.60358-2.07924-6.13284-3.12188-10.59382-3.12188-3.42237,0-6.69147.59695-9.81335,1.7848-3.12188,1.19188-5.68715,3.53329-7.6958,7.02625-2.00664,3.49497-3.01096,8.66181-3.01096,15.5005v3.34574h-11.59613c0-12.3403,2.48661-21.52444,7.46993-27.54636,4.9813-6.02192,13.34463-9.03288,25.09201-9.03288,10.85196,0,18.43483,3.42237,22.74859,10.26106,4.31174,6.84071,6.46963,17.91855,6.46963,33.23149v64.90204c0,1.19188.03428,3.45666.11092,6.80239.0726,3.34574.1452,6.58055.22184,9.70243.07462,3.12188.18554,5.13053.33478,6.02192h-10.25905c-.29847-3.12188-.66955-6.39098-1.11525-9.81335-.44569-3.41834-.74619-5.87268-.89139-7.36102-1.93403,5.35439-5.27977,9.88999-10.03721,13.6068-4.75946,3.7148-10.40829,5.57421-16.95052,5.57421ZM575.63807,174.85758c3.7148,0,7.06053-.85307,10.03721-2.56527,2.97063-1.70614,5.64883-3.93663,8.02856-6.68946,2.37569-2.7508,4.30973-5.68715,5.79807-8.81104v-42.37529c-7.88335,4.16452-14.46189,7.7321-19.73763,10.70474-5.27977,2.97668-9.44429,5.80008-12.48954,8.47627-3.04928,2.67619-5.24145,5.68715-6.58055,9.03288-1.33708,3.34574-2.00664,7.39732-2.00664,12.15476,0,7.7321,1.7848,13.01187,5.35237,15.83528,3.56959,2.82542,7.43363,4.23713,11.59815,4.23713Z"/><path d="M659.49727,184.0034c-5.94932,0-10.4103-1.19188-13.38295-3.56959-2.97466-2.37569-4.90668-5.57623-5.79807-9.5895-.89139-4.01529-1.3391-8.54887-1.3391-13.60478V61.55832h-16.95052v-7.80672h16.95052V12.48954h11.82201v41.26206h21.8572v7.80672h-21.8572v94.11825c0,6.99196.66955,11.89864,2.00664,14.72003,1.3391,2.82744,4.38435,4.23914,9.1438,4.23914,1.48632,0,3.08558-.11294,4.79576-.33478,1.70816-.22386,3.30742-.482,4.79576-.78047v9.1438c-1.7848.44569-3.79143.78047-6.02192,1.00433-2.23049.22184-4.23713.33478-6.02192.33478Z"/><path d="M715.25147,184.67093c-8.47425,0-15.05481-1.85941-19.73763-5.57421-4.68484-3.71681-7.95596-9.21842-9.81335-16.50483-1.86143-7.28439-2.78912-16.28097-2.78912-26.98773v-34.79243c0-10.70676.92769-19.70133,2.78912-26.98773,1.8574-7.28237,5.12852-12.786,9.81335-16.50483,4.68282-3.7148,11.26337-5.57623,19.73763-5.57623,8.62147,0,15.27866,1.86143,19.96148,5.57623,4.68282,3.71883,7.95192,9.18414,9.81335,16.39391,1.8574,7.2138,2.78912,16.24669,2.78912,27.09865v34.79243c0,10.70676-.93172,19.70334-2.78912,26.98773-1.86143,7.2864-5.13053,12.78801-9.81335,16.50483-4.68282,3.7148-11.34001,5.57421-19.96148,5.57421ZM715.25147,175.75099c6.24578,0,10.85196-1.59724,13.82864-4.79576,2.97264-3.1965,4.86836-7.7684,5.68715-13.7157.81475-5.94529,1.22616-13.00985,1.22616-21.18966v-35.68382c0-8.32703-.41141-15.42588-1.22616-21.30058-.81879-5.87268-2.7145-10.40627-5.68715-13.60478-2.97668-3.1965-7.58286-4.79576-13.82864-4.79576s-10.81768,1.59926-13.7157,4.79576c-2.90004,3.19852-4.76147,7.7321-5.57623,13.60478-.81879,5.8747-1.22616,12.97355-1.22616,21.30058v35.68382c0,8.17981.40738,15.24438,1.22616,21.18966.81475,5.9473,2.67619,10.5192,5.57623,13.7157,2.89802,3.19852,7.46993,4.79576,13.7157,4.79576Z"/><path d="M767.88783,182.6643V53.7516h11.81999v17.39622c3.86605-6.39098,8.65979-11.11414,14.38525-14.16342,5.72345-3.04525,11.11414-4.5719,16.17005-4.5719h1.00433c.36906,0,.78047.07664,1.22616.22386v12.26568c-.59493-.29444-1.3754-.47998-2.34141-.55661-.96802-.0726-1.82311-.11092-2.56527-.11092-5.9473,0-11.26337,1.41372-15.94619,4.23713-4.68282,2.82542-8.66382,6.91331-11.93292,12.26568v101.92698h-11.81999Z"/><path d="M858.65832,184.67093c-10.11183,0-18.1424-3.30742-24.08769-9.92427-5.9473-6.61484-9.36766-15.5731-10.25905-26.87479l10.03721-2.90004c.74215,10.856,3.2328,18.69902,7.47194,23.52906,4.23713,4.83407,9.99687,7.2501,17.28328,7.2501,6.54224,0,11.59815-1.81908,15.16774-5.46531,3.56758-3.64219,5.35237-8.80903,5.35237-15.5005,0-4.60619-1.52666-9.40194-4.5719-14.38525-3.04928-4.97928-7.84504-10.22073-14.38525-15.72436l-14.94389-12.71339c-6.39502-5.49758-11.07784-10.73903-14.05048-15.72234-2.97668-4.9813-4.46098-10.66844-4.46098-17.06346,0-5.94529,1.22616-10.9286,3.68051-14.94187,2.45233-4.01529,5.87067-7.09885,10.25905-9.25674,4.38435-2.15386,9.47858-3.23482,15.27664-3.23482,9.66412,0,16.87389,3.04928,21.63536,9.14582,4.75744,6.09856,7.28237,14.27434,7.58286,24.53338l-8.69811,2.67619c-.14924-6.69147-1.08096-12.04384-2.78912-16.05913-1.71018-4.01327-4.01327-6.91331-6.91331-8.69811-2.90004-1.78278-6.28208-2.67619-10.14813-2.67619-5.65286,0-10.22476,1.45002-13.7157,4.35006-3.49497,2.89802-5.24145,7.17549-5.24145,12.82431,0,4.75946.92567,8.88566,2.78711,12.37862,1.8574,3.49497,5.31405,7.54656,10.37198,12.15476l15.38958,13.60478c3.86403,3.27313,7.58286,6.76811,11.15044,10.4829,3.56959,3.71883,6.50392,7.84504,8.81104,12.37862,2.30309,4.53762,3.45666,9.92427,3.45666,16.17005,0,6.24376-1.30482,11.56185-3.90437,15.94619-2.60157,4.38636-6.24376,7.77042-10.9286,10.14813-4.68282,2.37569-10.22476,3.56758-16.61575,3.56758Z"/><path d="M915.74961,182.6643v-16.50483h13.38295v16.50483h-13.38295ZM920.43445,143.85658l-4.46098-141.84994h13.38093l-4.68282,141.84994h-4.23713Z"/>
+                    </clipPath>
+
+                    <clipPath id="topFuncreatorsTitleMask-e">
+                        <path d="M492.44641,184.67093c-6.84071,0-12.71138-1.3754-17.62007-4.12621-4.90668-2.74879-8.66181-7.72807-11.26136-14.94187-2.60358-7.21179-3.90437-17.43252-3.90437-30.66824v-34.34674c0-13.52815,1.3391-23.7872,4.01529-30.77916,2.67619-6.98591,6.5019-11.74335,11.48521-14.27232,4.9813-2.52695,10.81768-3.79345,17.50915-3.79345,8.02856,0,14.34694,1.71219,18.95716,5.13053,4.6082,3.42237,7.87932,8.88768,9.81335,16.39391,1.93202,7.50824,2.90004,17.43453,2.90004,29.77484v12.26568h-52.8582v20.52011c0,10.25905.70383,18.28761,2.11755,24.08769,1.4117,5.79807,3.68051,9.88999,6.80239,12.26568,3.1239,2.37973,7.13717,3.56959,12.04384,3.56959,3.1239,0,6.24578-.52031,9.36766-1.56094,3.12188-1.03861,5.72143-3.49296,7.80672-7.36102,2.07924-3.86403,3.12188-9.88596,3.12188-18.06577v-9.5895h11.59815v8.47425c0,11.00523-2.26881,19.9272-6.80239,26.76387-4.53762,6.84071-12.90095,10.25905-25.09201,10.25905ZM471.48262,108.17074h41.26005v-10.03519c0-7.73008-.41141-14.38727-1.22616-19.96148-.81879-5.57623-2.6419-9.88797-5.46531-12.93725-2.82542-3.04525-7.2864-4.5719-13.38093-4.5719-4.76147,0-8.73643,1.00433-11.93292,3.01096-3.19852,2.00664-5.53993,5.72546-7.02423,11.15245-1.48834,5.42901-2.23049,13.27001-2.23049,23.52906v9.81335Z"/>
+                    </clipPath>
+
+                    <linearGradient id="topFuncreatorsTitleFill">
+                        <stop offset="0" stop-color="#f0f"/>
+                        <stop offset="1" stop-color="blue"/>
+                    </linearGradient>
+        
+                    <linearGradient id="topFuncreatorsTitleGradient" gradientUnits="objectBoundingBox">
+                        <stop offset="0" stop-color="#f0f"/>
+                        <stop offset=".25" stop-color="blue"/>
+                        <stop offset=".5" stop-color="lime"/>
+                        <stop offset=".75" stop-color="#ffc800"/>
+                        <stop offset="1" stop-color="aqua"/>
+                    </linearGradient>
+                </defs>
+
+                <g clip-path="url(#topFuncreatorsTitleMask)">
+                    <rect x="0" y="0" width="100%" height="100%" fill="url(#topFuncreatorsTitleFill)"></rect>
+                    <rect cx="0" cy="0" width="10000%" height="100%" fill="url(#topFuncreatorsTitleGradient)" class="top_funcreators_title_gradient"></rect>
+                </g>
+
+                <g clip-path="url(#topFuncreatorsTitleMask-e)">
+                    <rect x="0" y="0" width="100%" height="100%" fill="url(#topFuncreatorsTitleFill)"></rect>
+                    <rect cx="0" cy="0" width="10000%" height="100%" fill="url(#topFuncreatorsTitleGradient)" class="top_funcreators_title_gradient"></rect>
+                </g>
+            </svg>
+
+            <div class="top_funcreators_symbol_wrap">
+                <div class="top_funcreators_symbol">Creative</div>
+                <div class="top_funcreators_symbol_ampersand">&</div>
+                <div class="top_funcreators_symbol">Technology</div>
+            </div>
+
+            <p class="top_funcreators_text">こんにちは！FUN Creator!チーム代表の服部ケンイチロウです。私たちはコーポレートスタッフ、アートディレクター、デザイナー、プログラマー、フルスタックエンジニア、ムービーデザイナー、SNSマーケターなどから構成された、多様な専門分野を有するクリエイティブ集団です。今まで成功するために必要なプロセスで最も大切なことは、資本重視のオークション戦略一択でしたが今は違います。GAFAM・FANGをはじめとした優れたテクノロジー企業が世界中に影響を与え、オンラインプラットフォームが劇的に普及しました。新しい時代になることで、今までの一方的でドライな顧客との関係性では人は魅了されなくなりました。もっと友好的で継続的に愛してくれる「FUN!」をつくれるクリエイティブこそが一番の経営財産となりました。気づきはじめた企業から行動しています。「顧客に購買させる時代」から、「顧客を仲間にする時代」へ。テクノロジーを活用し、もっとオープンで自由闊達な社会の実現に向けて。夢があり一緒に創造ができる仲間と、次の世代に向けて胸を張れるクリエイティブをお届けしていきます。</p>
+        </div>
+    </div>
+
+    
+    <style>
+        .security_container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+        }
+
+        .security_wrap{
+            border: 1px solid blue;
+            background-color: rgba(0, 0, 255, .1);
+            border-radius: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            padding: 50px 30px;
+        }
+        .security_wrap:nth-child(2){
+            border-color: red;
+            background-color: rgba(255, 0, 0, .1);
+        }
+
+        .security_title_inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .security_title{
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .security_icon{
+            width: 20%;
+        }
+
+        .security_text{
+            font-size: 14px;
+            margin-top: 50px;
+        }
+    </style>
+    <div class="security_container">
+        <div class="security_wrap">
+            <div class="security_title_inner">
+                <h1 class="security_title">セキュリティ</h1>
+                <div class="security_icon" data-jsonPath="./json/lock.json"></div>
+            </div>
+            <p class="security_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquam tristique, nisl elit tincidunt nunc, vitae volutpat justo mauris id nunc. Nullam auctor, nunc id aliquam tristique, nisl elit tincidunt nunc, vitae volutpat justo mauris id nunc. Nullam auctor, nunc id aliquam tristique, nisl elit tincidunt nunc, vitae volutpat justo mauris id nunc.</p>
+        </div>
+        <div class="security_wrap">
+            <div class="security_title_inner">
+                <h1 class="security_title">モーフィング</h1>
+                <div class="security_icon" data-jsonPath="./json/morphing01.json"></div>
+            </div>
+            <p class="security_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquam tristique, nisl elit tincidunt nunc, vitae volutpat justo mauris id nunc. Nullam auctor, nunc id aliquam tristique, nisl elit tincidunt nunc, vitae volutpat justo mauris id nunc. Nullam auctor, nunc id aliquam tristique, nisl elit tincidunt nunc, vitae volutpat justo mauris id nunc.</p>
+        </div>
+        <div class="security_wrap">
+            <div class="security_title_inner">
+                <h1 class="security_title">タイトル</h1>
+                <div class="security_icon" data-jsonPath="./json/title.json"></div>
+            </div>
+            <p class="security_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquam tristique, nisl elit tincidunt nunc, vitae volutpat justo mauris id nunc. Nullam auctor, nunc id aliquam tristique, nisl elit tincidunt nunc, vitae volutpat justo mauris id nunc. Nullam auctor, nunc id aliquam tristique, nisl elit tincidunt nunc, vitae volutpat justo mauris id nunc.</p>
+        </div>
+    </div>
+
+    <script>
+        gsap.fromTo('.top_funcreators_title_gradient', 3, {
+            transform: 'translateX(0%)'
+        },
+        {
+            transform: 'translateX(-9900%)',
+            repeat: -1,
+            yoyo: true,
+        })
+
+        // live serverで動く
+        const lottieTaget = [...document.querySelectorAll('.security_icon')];
+
+        lottieTaget.forEach(element => {
+            const animation = lottie.loadAnimation({
+                container: element, //呼び出し位置の要素に入れた要素を指定
+                renderer: 'svg', // svg・canvas・htmlの3種類から機能に応じて指定(省略可、デフォルトはsvg)
+                loop: true, // ループの有無を指定(省略可、デフォルトはtrue)
+                autoplay: true, // 自動再生の有無を指定(省略可、デフォルトはtrue)
+                path: element.dataset.jsonpath //使用するJSONファイルがある実際のディレクトリ名・ファイル名を入れる
+            });
+        })
+
+    </script>
+</body>
+</html>

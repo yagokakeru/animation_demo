@@ -1,0 +1,69 @@
+body{
+    background-color: darkorange;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    padding-left: 10%;
+}
+
+p{
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 25px;
+    padding-left: 10%;
+}
+
+.op_container{
+    --rootLoadingGradientValue1: 0%;
+    --rootLoadingGradientValue2: 0%;
+    --rootLoadingGradientValue3: 0%;
+    /* background-color: #969696; */
+    background: linear-gradient(rgba(255, 0, 255, .2), rgba(0, 0, 155, .2), rgba(0, 255, 0, .2), rgba(255, 200, 0, .2), rgba(0, 255, 255, .2)), #fff;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* mask-image: radial-gradient(circle at 50% 50%,rgba(0,0,0,0) 0%,rgba(0,0,0,0) var(--rootLoadingGradientValue1),rgb(0,0,0) var(--rootLoadingGradientValue2),rgb(0,0,0) var(--rootLoadingGradientValue3)); */
+    mask-image: radial-gradient(circle at 50% 50%,rgba(0,0,0,0) 0%, rgba(0,0,0,0) var(--rootLoadingGradientValue1), rgb(0,0,0) var(--rootLoadingGradientValue2), rgb(0,0,0) var(--rootLoadingGradientValue3));
+}
+.op_container::before{
+    content: "";
+    background: linear-gradient(45deg,rgba(255, 255, 255, .5),rgba(255, 255, 255, .3));
+    /* background: linear-gradient(45deg,rgba(0,0,0, .5),rgba(0,0,0, .3)); */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.op_point_logo{
+    display: block;
+    width: clamp(80px, 10%, 120px);
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.op_funcreators_logo{
+    display: block;
+    width: clamp(260px, 30%, 360px);
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
